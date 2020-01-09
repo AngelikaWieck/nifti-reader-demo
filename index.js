@@ -62,12 +62,13 @@ class NIFTIImage {
       if (typedData[i] > max) max = typedData[i];
     }
 
-    let factor = 256 / (max - min);
+    let factor = 256 / (max + 1 - min);
+    let data = new Uint8Array(typedData.length);
     for (let i = 0; i < typedData.length; i++) {
-      typedData[i] = (typedData[i] - min) * factor;
+      data[i] = (typedData[i] - min) * factor;
     }
 
-    this.data = typedData;
+    this.data = data;
   }
 }
 
