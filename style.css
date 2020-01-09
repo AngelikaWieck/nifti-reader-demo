@@ -1,0 +1,16 @@
+.canvas-container {
+  display: flex;
+  align-items: center;
+}
+
+canvas {
+  margin: 1em;
+}
+
+#canvasYZ {
+  transform: scaleY(-1);
+}
+
+#canvasXZ {
+  transform: scaleY(-1);
+}
